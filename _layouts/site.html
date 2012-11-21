@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="author" content="{{ site.author.name }}">
+    <meta name="description" content="{% if page.summary %}{{ page.summary }}{% else %}{{ site.description }}{% endif %}">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1'>
+    <link rel="alternate" type="application/atom+xml" title="Albatross Feed" href="/atom.xml">
+    <link rel="stylesheet" href="/css/master.css">
+    {% include typekit.html %}
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  </head>
+  <body>
+    {{ content }}
+  </body>
+</html>

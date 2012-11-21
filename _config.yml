@@ -1,0 +1,23 @@
+exclude: [README.md, Gemfile, Gemfile.lock]
+
+pygments: true
+markdown_ext: md
+markdown: redcarpet2
+
+redcarpet:
+  extensions: ["no_intra_emphasis", "fenced_code_blocks", "autolink", "strikethrough", "superscript"]
+
+domain: albatross.io
+permalink: /:title
+
+title: Albatross
+description: Personal website of Alexis Georges
+author:
+  name: Alexis Georges
+  email: alexis.georges@gmail.com
+  github.com: apucacao
+  twitter: apucacao
+
+services:
+  google: "UA-18248103-4"
+  typekit: "fcj0sga"

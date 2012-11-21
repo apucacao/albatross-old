@@ -1,0 +1,23 @@
+@import "base";
+
+body {
+  font: 125%/1.6 $copy;
+  color: $textColor;
+  background-color: $pageColor;
+}
+
+h1, h2, h3 {
+  font-family: $heading;
+}
+
+a, a:link {
+  color: $linkColor;
+}
+
+a:hover, a:active {
+  color: $linkActiveColor;
+}
+
+a:visited {
+  color: $linkVisitedColor;
+}

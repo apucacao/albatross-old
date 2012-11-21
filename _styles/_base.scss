@@ -1,0 +1,17 @@
+$black: hsl(0, 0%, 20%);
+$cream: hsl(32, 57%, 95%);
+$teal: hsl(191, 51%, 61%);
+
+$red: hsl(0, 86%, 46%);
+$darkRed: hsl(5, 95%, 41%);
+$darkerRed: darken($darkRed, 5%);
+
+$pageColor: $cream;
+$textColor: $black;
+
+$linkColor: $red;
+$linkActiveColor: $darkerRed;
+$linkVisitedColor: $darkerRed;
+
+$copy: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2", georgia, serif;
+$heading: "brandon-grotesque-1","brandon-grotesque-2";
