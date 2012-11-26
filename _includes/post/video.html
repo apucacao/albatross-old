@@ -1,0 +1,23 @@
+{% detect_video post.video %}
+
+{% if index %}
+  <p><a href="{{ post.url }}">Watch the full video »</a></p>
+{% else %}
+  {% if video_site == 'vimeo' %}
+    <iframe
+      width="640"
+      height="360"
+      frameborder="0"
+      src="http://player.vimeo.com/video/{{ video_id }}?title=0&portrait=0"></iframe>
+  {% elsif video_site == 'youtube' %}
+    <iframe
+      class="youtube-player"
+      type="text/html"
+      width="640"
+      height="385"
+      frameborder="0"
+      src="http://www.youtube.com/embed/{{ video_id }}?showinfo=0"></iframe>
+  {% endif %}
+{% endif %}
+
+{% unless post.content == '' %}{{ post.content | markdownify }}{% endunless %}

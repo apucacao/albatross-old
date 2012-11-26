@@ -10,6 +10,8 @@ require.config({
     text: 'vendor/require.text',
 
     jquery: 'vendor/jquery',
+    fitvids: 'vendor/jquery.fitvids',
+
     underscore: 'vendor/underscore',
     backbone: 'vendor/backbone',
     moment: 'vendor/moment'
@@ -23,7 +25,9 @@ require.config({
     backbone: {
       deps: ['underscore', 'jquery'],
       exports: 'Backbone'
-    }
+    },
+
+    fitvids: ['jquery']
   },
 
   config: {

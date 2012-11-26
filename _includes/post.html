@@ -1,3 +1,5 @@
+{% capture post_type %}{% if post.category == 'videos' %}video{% else %}article{% endif %}{% endcapture %}
+
 <article {% unless index %}role="main"{% endunless %} {% if index %}id="{{ post.title | slugify }}" class="{{ post_type }}"{% endif %}>
   <header>
     <h1><a href="{{ post.url }}">{{ post.title | typogrify }}</a></h1>
@@ -7,7 +9,11 @@
     </time>
   </header>
 
-  {{ post.content | markdownify }}
+  {% if post_type == 'video' %}
+    {% include post/video.html %}
+  {% else %}
+    {% include post/article.html %}
+  {% endif %}
 
   <div class="fin">◆</div>
 

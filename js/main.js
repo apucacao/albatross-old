@@ -2,6 +2,7 @@ require([
   'bootstrap',
   'jquery',
   'search',
+  'fitvids',
   'ext/timeago'
 ],
 
@@ -9,6 +10,7 @@ function(bootstrap, $, search) {
 
   $(function() {
 
+    $('article').fitVids();
     $('time').timeago();
 
     // search
