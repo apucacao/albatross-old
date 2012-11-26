@@ -1,0 +1,10 @@
+---
+layout: page
+title: Home
+permalink: /
+---
+
+{% for post in paginator.posts %}
+  {% assign index = true %}
+  {% include post.html %}
+{% endfor %}

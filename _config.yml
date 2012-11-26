@@ -10,6 +10,8 @@ redcarpet:
 domain: albatross.io
 permalink: /:title
 
+paginate: 10
+
 title: Albatross
 description: Personal website of Alexis Georges
 author:

@@ -1,13 +1,33 @@
+@import "normalize";
 @import "base";
+@import "syntax";
+@import "ss-standard";
+@import "ss-social-circle";
+
+// =general
 
 body {
-  font: 125%/1.6 $copy;
+  font: 125%/1.6 $copyTypeface;
   color: $textColor;
   background-color: $pageColor;
 }
 
 h1, h2, h3 {
-  font-family: $heading;
+  font-family: $headingTypeface;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 2em;
+  margin: 1.6em 0 0;
+}
+
+h2 {
+
+}
+
+h3 {
+
 }
 
 a, a:link {
@@ -20,4 +40,147 @@ a:hover, a:active {
 
 a:visited {
   color: $linkVisitedColor;
+}
+
+time {
+  color: $secondaryTextColor;
+  font-family: $smallTypeface;
+  font-size: 0.55em;
+  line-height: 1.45;
+
+  .ss-clock {
+    // font-size: 0.5em;
+    vertical-align: middle;
+    color: lighten($secondaryTextColor, 30%);
+  }
+}
+
+blockquote {
+  margin: 0 5%;
+  padding: 0;
+  font-style: italic;
+}
+
+pre, code {
+  background: $codeBackgroundColor;
+}
+
+pre {
+  padding: 0.5em;
+}
+
+nav {
+  overflow: hidden;
+
+  h1 {
+    float: left;
+    font-family: $markTypeface;
+    font-size: 3em;
+
+    a, a:link, a:visited {
+      text-decoration: none;
+      color: $textColor;
+    }
+
+    a:hover, a:active {
+      color: $linkActiveColor;
+    }
+  }
+
+  .search {
+    float: right;
+    margin: 4.8em 0.5em 0;
+    line-height: 4.8em;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+footer {
+  text-align: center;
+  background: $lightCream;
+  margin: 1.6em 0 0;
+  padding: 0.5em 0;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      display: inline;
+    }
+  }
+}
+
+.social {
+  a:last-child {
+    margin: 0 0 0 0.35em;
+  }
+
+  a:first-child {
+    margin: 0 0.35em 0 0;
+  }
+
+  a:visited {
+    color: $linkColor;
+  }
+}
+
+.fin {
+  text-align: center;
+  color: $finColor;
+}
+
+.copyright {
+  display: block;
+}
+
+// =search
+
+.search {
+  label {
+    display: inline-block;
+    line-height: 0.45;
+    color: $secondaryTextColor;
+    padding: 0 0.25em 0 0;
+  }
+
+  input {
+    display: inline-block;
+    border: none;
+  }
+}
+
+#search-results {
+  &.loading {
+    min-height: 1.5em;
+  }
+
+  .search-result {
+    margin: 0 0 1.5em 0;
+  }
+}
+
+// =layout
+
+#lasso {
+  width: 40em;
+  margin: 0 auto;
+}
+
+// =post
+
+*[role=main] aside {
+  text-align: center;
+  margin: 1.6em 0 0;
+
+  a + a, a + span, span + a, span + span {
+    margin: 0 0.35em;
+  }
+
+  a:visited {
+    color: $linkColor;
+  }
 }

@@ -12,6 +12,21 @@
     <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
   </head>
   <body>
-    {{ content }}
+    <div id="lasso">
+      {% include nav.html %}
+      <div class="content">
+        {{ content }}
+      </div>
+      {% include footer.html %}
+    </div>
+    <script src="/js/vendor/require.js" data-main="/js/albatross.js"></script>
+    <script>
+      define('bootstrap', function() {
+        return {
+          {% if page.inline_search %}search: true{% endif %}
+        };
+      });
+    </script>
+    {% include google-analytics.html %}
   </body>
 </html>

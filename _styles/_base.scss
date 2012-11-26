@@ -1,6 +1,9 @@
 $black: hsl(0, 0%, 20%);
-$cream: hsl(32, 57%, 95%);
+$lightBlack: lighten($black, 25%);
 $teal: hsl(191, 51%, 61%);
+
+$cream: hsl(32, 57%, 95%);
+$lightCream: lighten($cream, 3%);
 
 $red: hsl(0, 86%, 46%);
 $darkRed: hsl(5, 95%, 41%);
@@ -8,10 +11,23 @@ $darkerRed: darken($darkRed, 5%);
 
 $pageColor: $cream;
 $textColor: $black;
+$secondaryTextColor: $lightBlack;
+$finColor: $teal;
+
+$borderColor: $teal;
 
 $linkColor: $red;
 $linkActiveColor: $darkerRed;
 $linkVisitedColor: $darkerRed;
 
-$copy: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2", georgia, serif;
-$heading: "brandon-grotesque-1","brandon-grotesque-2";
+$brandonGrotesque: "brandon-grotesque-1","brandon-grotesque-2";
+$skolar: "skolar-1","skolar-2", georgia, serif;
+$metaSerif: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2";
+
+$copyTypeface: $skolar, georgia, serif;
+$headingTypeface: $copyTypeface;
+$markTypeface: $copyTypeface;
+
+$smallTypeface: "lucida grande", "lucida sans unicode", "arial", sans-serif;
+
+$codeBackgroundColor: $lightCream;

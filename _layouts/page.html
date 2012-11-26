@@ -3,6 +3,8 @@ layout: site
 ---
 
 <section role="main">
+  {% unless page.url == '/' %}
   <h1>{{ page.title }}</h1>
+  {% endunless %}
   {{ content }}
 </section>
