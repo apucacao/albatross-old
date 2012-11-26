@@ -1,12 +1,15 @@
 require([
   'bootstrap',
   'jquery',
-  'search'
+  'search',
+  'ext/timeago'
 ],
 
 function(bootstrap, $, search) {
 
   $(function() {
+
+    $('time').timeago();
 
     // search
     if (bootstrap.search) {

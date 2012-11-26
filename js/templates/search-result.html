@@ -1,5 +1,8 @@
 <article class="search-result">
   <a href="<%= link %>"><%= title %></a>
-  <time pubdate class="timeago" datetime="<%= published_on %>"><%= published_on %></time>
+  <time pubdate class="timeago" datetime="<%= published_on %>">
+    <span class="ss-standard ss-clock"></span>
+    <%= published_on %>
+  </time>
   <% if (summary && summary.length > 0) { %><p><%= summary %>.</p><% } %>
 </article>

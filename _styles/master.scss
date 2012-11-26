@@ -94,6 +94,10 @@ nav {
   }
 }
 
+.content h1 + .search {
+  padding-top: 1.6em inherit inherit;
+}
+
 img {
   max-width: 100%;
 }
@@ -144,12 +148,17 @@ footer {
     display: inline-block;
     line-height: 0.45;
     color: $secondaryTextColor;
-    padding: 0 0.25em 0 0;
+    padding: 0 0 0 0.25em;
   }
 
   input {
     display: inline-block;
     border: none;
+    background-color: $inputBlurColor;
+
+    &:focus {
+      background-color: $inputFocusColor;
+    }
   }
 }
 
@@ -159,7 +168,11 @@ footer {
   }
 
   .search-result {
-    margin: 0 0 1.5em 0;
+    margin: 1.5em 0;
+
+    p {
+      margin: 0;
+    }
   }
 }
 

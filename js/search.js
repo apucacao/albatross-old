@@ -5,7 +5,8 @@ define([
   'backbone',
   'tapir',
   'text!templates/search-result.html',
-  'text!templates/search-no-results.html'
+  'text!templates/search-no-results.html',
+  'ext/timeago'
 ],
 
 function(config, $, _, Backbone, tapir, searchResultTemplate, searchResultEmptyTemplate) {
@@ -48,7 +49,7 @@ function(config, $, _, Backbone, tapir, searchResultTemplate, searchResultEmptyT
       } else {
         this.$el.html(_.map(this.collection.models, function(result) {
           return this.tmpl(result.toJSON());
-        }, this).join(""));
+        }, this).join(''));
 
         this.$('time').timeago();
       }
