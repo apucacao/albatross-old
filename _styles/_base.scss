@@ -1,5 +1,6 @@
 $black: hsl(0, 0%, 20%);
 $lightBlack: lighten($black, 25%);
+
 $teal: hsl(191, 51%, 61%);
 
 $cream: hsl(32, 57%, 95%);
@@ -22,6 +23,9 @@ $linkVisitedColor: $darkerRed;
 
 $inputBlurColor: $lightCream;
 $inputFocusColor: white;
+
+$overlayColor: transparentize($black, 0.55);
+$loadingEllipsisColor: $black;
 
 $brandonGrotesque: "brandon-grotesque-1","brandon-grotesque-2";
 $skolar: "skolar-1","skolar-2", georgia, serif;
