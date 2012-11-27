@@ -7,7 +7,6 @@ define([
 function($, _, mousetrap) {
 
   var navigateTo = function(href) {
-    console.log(href);
     if (!href) { return; }
     document.location = href;
   };
