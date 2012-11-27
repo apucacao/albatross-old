@@ -1,0 +1,14 @@
+({
+  "mainConfigFile": "js/albatross.js",
+  "out": "js/albatross.min.js",
+  "name": "albatross",
+  "include": ["albatross", "main"],
+  "optimize": "uglify2",
+  "skipDirOptimize": true,
+  "wrap": true,
+  "urlArgs": null,
+  "preserveLicenseComments": false,
+  "paths": {
+    "bootstrap": "empty:"
+  }
+})

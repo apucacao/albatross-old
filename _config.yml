@@ -1,4 +1,6 @@
-exclude: [README.md, Gemfile, Gemfile.lock]
+debug: false
+
+exclude: [README.md, Gemfile, Gemfile.lock, js-build.json]
 
 pygments: true
 markdown_ext: md
