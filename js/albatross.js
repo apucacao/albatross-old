@@ -4,17 +4,19 @@ require.config({
   urlArgs: "bust=" +  (new Date()).getTime(),
 
   paths: {
-    ext: 'ext',
-    templates: 'templates',
-
-    text: 'vendor/require.text',
-
-    jquery: 'vendor/jquery',
-    fitvids: 'vendor/jquery.fitvids',
-
+    ext       : 'ext',
+    templates : 'templates',
+    
+    text      : 'vendor/require.text',
+    
+    jquery    : 'vendor/jquery',
+    fitvids   : 'vendor/jquery.fitvids',
+    
     underscore: 'vendor/underscore',
-    backbone: 'vendor/backbone',
-    moment: 'vendor/moment'
+    backbone  : 'vendor/backbone',
+    
+    moment    : 'vendor/moment',
+    mousetrap : 'vendor/mousetrap'
   },
 
   shim: {

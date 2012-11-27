@@ -30,6 +30,10 @@ function(config, $, _, Backbone, tapir, searchResultTemplate, searchResultEmptyT
   var SearchView = Backbone.View.extend({
     initialize: function() {
       this.$('input').val(this.options.query);
+    },
+
+    focus: function() {
+      this.$('input').focus();
     }
   });
 
@@ -72,8 +76,8 @@ function(config, $, _, Backbone, tapir, searchResultTemplate, searchResultEmptyT
 
       var results = new Results();
 
-      new SearchView({el: searchEl, query: query});
-      new ResultsView({el: resultEl, collection: results});
+      var searchView = new SearchView({el: searchEl, query: query});
+      var resultsView = new ResultsView({el: resultEl, collection: results});
 
       results.fetch(query);
     },

@@ -1,17 +1,20 @@
 require([
   'bootstrap',
   'jquery',
+  'shortcuts',
   'search',
   'fitvids',
   'ext/timeago'
 ],
 
-function(bootstrap, $, search) {
+function(bootstrap, $, shortcuts, search) {
 
   $(function() {
 
     $('article').fitVids();
     $('time').timeago();
+
+    shortcuts.init();
 
     // search
     if (bootstrap.search) {
