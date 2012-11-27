@@ -191,8 +191,8 @@ footer {
   text-align: center;
   margin: 1.6em 0 0;
 
-  a + a, a + span, span + a, span + span {
-    margin: 0 0.35em;
+  a, span {
+    margin: 0 0.5em;
   }
 
   a:visited {
