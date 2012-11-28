@@ -16,6 +16,7 @@ function($, Backbone) {
       this.mask();
       xhr.success($.proxy(this, 'display'));
       xhr.fail($.proxy(this, 'cannotDisplay'));
+      xhr.always($.proxy(this, 'notify'));
     },
 
     display: function(html) {
@@ -26,6 +27,10 @@ function($, Backbone) {
 
     cannotDisplay: function(xhr, error, status) {
       $('#mask .status').removeClass('ss-ellipsis').addClass('ss-alert');
+    },
+
+    notify: function() {
+      this.trigger('ready');
     },
 
     mask: function() {

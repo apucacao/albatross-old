@@ -4,14 +4,22 @@
 @import "ss-standard";
 @import "ss-social-circle";
 
+@import "compass/css3/box-sizing";
 @import "compass/css3/transition";
 
 // =general
 
 body {
-  font: 125%/1.6 $copyTypeface;
+  font-family: $copyTypeface;
+  font-size: 125%;
+  line-height: 1.6;
   color: $textColor;
   background-color: $pageColor;
+
+  @media (max-width: 599px) {
+    font-size: 112.5%;
+    line-height: 1.44;
+  }
 }
 
 h1, h2, h3 {
@@ -22,6 +30,10 @@ h1, h2, h3 {
 h1 {
   font-size: 2em;
   margin: 1.6em 0 0;
+
+  @media (max-width: 599px) {
+    font-size: 1.34em;
+  }
 }
 
 a, a:link {
@@ -43,7 +55,6 @@ time {
   line-height: 1.45;
 
   .ss-clock {
-    // font-size: 0.5em;
     vertical-align: middle;
     color: lighten($secondaryTextColor, 30%);
   }
@@ -61,6 +72,10 @@ pre, code {
   font-size: 18px;
   font-family: $codeTypeface;
   background: $codeBackgroundColor;
+
+  @media (max-width: 599px) {
+    font-size: 14px;
+  }
 }
 
 pre {
@@ -74,6 +89,11 @@ nav {
     float: left;
     font-family: $markTypeface;
     font-size: 3em;
+
+    @media (max-width: 599px) {
+      font-size: 1em;
+      font-weight: bold;
+    }
 
     a, a:link, a:visited {
       text-decoration: none;
@@ -89,6 +109,10 @@ nav {
     float: right;
     margin: 4.8em 0.5em 0;
     line-height: 4.8em;
+
+    @media (max-width: 599px) {
+      display: none;
+    }
   }
 }
 
@@ -121,14 +145,6 @@ footer {
   a {
     margin: 0 0.5em;
   }
-
-  // a:last-child {
-  //   margin: 0 0 0 0.35em;
-  // }
-
-  // a:first-child {
-  //   margin: 0 0.35em 0 0;
-  // }
 
   a:visited {
     color: $linkColor;
@@ -182,8 +198,14 @@ footer {
 // =layout
 
 #lasso {
-  width: 40em;
-  margin: 0 auto;
+  @include box-sizing(border-box);
+  padding: 0 1em;
+  width: 100%;
+
+  @media (min-width: 600px) {
+    max-width: 40em;
+    margin: 0 auto;
+  }
 }
 
 // =post
@@ -216,8 +238,7 @@ footer {
 
 .loading #mask {
   z-index: 100;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  @include box-sizing(border-box);
   top: 0;
   left: 0;
   right: 0;
