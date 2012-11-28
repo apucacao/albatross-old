@@ -6,7 +6,6 @@
   "optimize": "uglify2",
   "skipDirOptimize": true,
   "wrap": true,
-  "urlArgs": null,
   "preserveLicenseComments": false,
   "paths": {
     "bootstrap": "empty:"

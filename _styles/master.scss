@@ -4,6 +4,8 @@
 @import "ss-standard";
 @import "ss-social-circle";
 
+@import "compass/css3/transition";
+
 // =general
 
 body {
@@ -56,6 +58,8 @@ blockquote {
 .fluid-width-video-wrapper { margin: 1.6em 0; }
 
 pre, code {
+  font-size: 18px;
+  font-family: $codeTypeface;
   background: $codeBackgroundColor;
 }
 
@@ -88,7 +92,7 @@ nav {
   }
 }
 
-.content h1 + .search {
+#content h1 + .search {
   padding-top: 1.6em inherit inherit;
 }
 
@@ -199,15 +203,26 @@ footer {
 
 // =mask
 
+#content {
+  z-index: 1;
+}
+
+#mask {
+  position: fixed;
+  z-index: -1;
+  background-color: $startOverlayColor;
+  @include transition(background-color 0.35s ease-in);
+}
+
 .loading #mask {
+  z-index: 100;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: $overlayColor;
+  background-color: $overlayColor;
 
   span {
     position: fixed;
@@ -217,7 +232,7 @@ footer {
     height: 1em;
     margin-top: -0.5em;
     margin-left: -0.5em;
-    font-size: 10em;
+    font-size: 9em;
     line-height: 1;
     color: $loadingEllipsisColor;
   }

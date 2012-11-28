@@ -14,7 +14,7 @@
   <body>
     <div id="lasso">
       {% include nav.html %}
-      <div class="content">
+      <div id="content">
         {{ content }}
       </div>
       {% include footer.html %}
@@ -28,6 +28,8 @@
       });
     </script>
     {% include google-analytics.html %}
-    <div id="mask"><span class="ss-icon ss-standard ss-ellipsis"></span></div>
+    <div id="mask">
+      <span class="status ss-icon ss-standard ss-ellipsis"></span>
+    </div>
   </body>
 </html>

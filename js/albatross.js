@@ -1,8 +1,6 @@
 require.config({
   deps: ['./main'],
 
-  urlArgs: "bust=" +  (new Date()).getTime(),
-
   paths: {
     ext       : 'ext',
     templates : 'templates',

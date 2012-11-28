@@ -24,16 +24,19 @@ $linkVisitedColor: $darkerRed;
 $inputBlurColor: $lightCream;
 $inputFocusColor: white;
 
-$overlayColor: transparentize($black, 0.55);
-$loadingEllipsisColor: $black;
+$overlayColor: transparentize($cream, 0.25);
+$startOverlayColor: $cream;
+$loadingEllipsisColor: $teal;
 
 $brandonGrotesque: "brandon-grotesque-1","brandon-grotesque-2";
 $skolar: "skolar-1","skolar-2", georgia, serif;
 $metaSerif: "ff-meta-serif-web-pro-1","ff-meta-serif-web-pro-2";
+$sourcecodePro: "source-code-pro-1","source-code-pro-2";
 
 $copyTypeface: $skolar, georgia, serif;
 $headingTypeface: $copyTypeface;
 $markTypeface: $copyTypeface;
+$codeTypeface: $sourcecodePro, monospace;
 
 $smallTypeface: "lucida grande", "lucida sans unicode", "arial", sans-serif;
 
