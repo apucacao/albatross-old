@@ -25,6 +25,12 @@ body {
 h1, h2, h3 {
   font-family: $headingTypeface;
   font-weight: normal;
+
+  @media (max-width: 599px) {
+    font-weight: bold;
+    font-size: 1em;
+    margin: 1.44;
+  }
 }
 
 h1 {
@@ -32,8 +38,13 @@ h1 {
   margin: 1.6em 0 0;
 
   @media (max-width: 599px) {
-    font-size: 1.34em;
+    font-size: 1em;
+    margin: 1.44;
   }
+}
+
+p, ul, blockquote {
+  margin: 1.6em 0;
 }
 
 a, a:link {
@@ -91,13 +102,14 @@ nav {
     font-size: 3em;
 
     @media (max-width: 599px) {
-      font-size: 1em;
+      font-size: 1.5em;
       font-weight: bold;
     }
 
     a, a:link, a:visited {
       text-decoration: none;
       color: $textColor;
+      color: $markColor;
     }
 
     a:hover, a:active {
@@ -117,7 +129,7 @@ nav {
 }
 
 #content h1 + .search {
-  padding-top: 1.6em inherit inherit;
+  padding: 1.6em inherit inherit;
 }
 
 img {
@@ -154,6 +166,11 @@ footer {
 .fin {
   text-align: center;
   color: $finColor;
+  margin: 3.2em 0;
+
+  @media (max-width: 599px) {
+    margin: 1.6em;
+  }
 }
 
 .copyright {
@@ -173,6 +190,7 @@ footer {
   input {
     display: inline-block;
     border: none;
+    border-radius: none;
     background-color: $inputBlurColor;
 
     &:focus {

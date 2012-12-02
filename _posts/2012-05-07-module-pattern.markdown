@@ -89,7 +89,7 @@ queue.size(); // 5
 There are a few variations of the module pattern, which [Ben Cherry explores in great detail][indepth];
 Addy Osmani also [talks about it][book] in his _fantastic_ book on design patterns.
 
-### Note
+## Note
 
 In the code, notice how module functions are assigned to a property of `mod` but also to a local variable. As
 I explain above, variables declared inside the module are private, so users of our module can only call
