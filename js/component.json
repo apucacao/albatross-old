@@ -1,0 +1,15 @@
+{
+  "name": "",
+  "version": "0.1.0",
+  "dependencies": {
+    "jquery": "~1.8.3",
+    "d3": "~2.10.3",
+    "backbone": "~0.9.2",
+    "lodash": "~0.10.0",
+    "moment": "~1.7.2",
+    "requirejs": "~2.1.2",
+    "mousetrap": "~1.2.1",
+    "requirejs-text": "~2.0.3",
+    "FitVids.js": "git://github.com/davatron5000/FitVids.js.git"
+  }
+}

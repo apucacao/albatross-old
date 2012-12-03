@@ -1,11 +1,9 @@
 ({
   "mainConfigFile": "js/albatross.js",
-  "out": "js/albatross.min.js",
+  "dir": "js-build/",
+  "skipDirOptimize": true,
   "name": "albatross",
   "include": ["albatross", "main"],
-  "optimize": "uglify2",
-  "skipDirOptimize": true,
-  "wrap": true,
   "preserveLicenseComments": false,
   "paths": {
     "bootstrap": "empty:"

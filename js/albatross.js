@@ -2,28 +2,20 @@ require.config({
   deps: ['./main'],
 
   paths: {
-    ext       : 'ext',
-    templates : 'templates',
-    
-    text      : 'vendor/require.text',
-    
-    jquery    : 'vendor/jquery',
-    fitvids   : 'vendor/jquery.fitvids',
-    
-    underscore: 'vendor/underscore',
-    backbone  : 'vendor/backbone',
-    
-    moment    : 'vendor/moment',
-    mousetrap : 'vendor/mousetrap'
+    ext      : 'ext',
+    templates: 'templates',
+    text     : 'components/requirejs-text/text',
+    jquery   : 'components/jquery/jquery',
+    fitvids  : 'components/FitVids.js/jquery.fitvids',
+    lodash   : 'components/lodash/lodash',
+    backbone : 'components/backbone/backbone',
+    moment   : 'components/moment/moment',
+    mousetrap: 'components/mousetrap/mousetrap'
   },
 
   shim: {
-    underscore: {
-      exports: '_'
-    },
-
     backbone: {
-      deps: ['underscore', 'jquery'],
+      deps: ['lodash', 'jquery'],
       exports: 'Backbone'
     },
 

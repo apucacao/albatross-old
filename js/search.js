@@ -1,7 +1,7 @@
 define([
   'module',
   'jquery',
-  'underscore',
+  'lodash',
   'backbone',
   'tapir',
   'text!templates/search-result.html',

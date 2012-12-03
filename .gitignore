@@ -2,6 +2,7 @@
 _site/
 .cache/
 .sass-cache/
-js/albatross.min.js
-css/master.css
+js/components/
+js-build/
 _drafts/
+css/master.css
