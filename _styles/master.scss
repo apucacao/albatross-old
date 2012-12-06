@@ -22,6 +22,12 @@ body {
   }
 }
 
+::selection {
+  color: white;
+  background-color: $selectionColor;
+  text-shadow: none;
+}
+
 h1, h2, h3 {
   font-family: $headingTypeface;
   font-weight: normal;
