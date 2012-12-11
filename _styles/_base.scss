@@ -12,7 +12,8 @@ $darkerRed: darken($darkRed, 5%);
 
 $selectionColor: $teal;
 
-$pageColor: $cream;
+// $pageColor: $cream;
+$pageColor: white;
 $markColor: $black;
 $textColor: $black;
 $secondaryTextColor: $lightBlack;
@@ -24,7 +25,7 @@ $linkColor: $red;
 $linkActiveColor: $darkerRed;
 $linkVisitedColor: $darkerRed;
 
-$inputBlurColor: $lightCream;
+$inputBlurColor: $cream;
 $inputFocusColor: white;
 
 $overlayColor: transparentize($cream, 0.25);
@@ -43,4 +44,10 @@ $codeTypeface: $sourcecodePro, monospace;
 
 $smallTypeface: "lucida grande", "lucida sans unicode", "arial", sans-serif;
 
-$codeBackgroundColor: $lightCream;
+$codeBackgroundColor: $cream;
+
+$borderRadius: 3px;
+
+@mixin corners {
+  @include border-radius($borderRadius);
+}

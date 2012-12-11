@@ -6,6 +6,7 @@
 
 @import "compass/css3/box-sizing";
 @import "compass/css3/transition";
+@import "compass/css3/border-radius";
 
 // =general
 
@@ -97,6 +98,7 @@ pre, code {
 
 pre {
   padding: 0.5em;
+  @include corners;
 }
 
 nav {
@@ -196,7 +198,7 @@ footer {
   input {
     display: inline-block;
     border: none;
-    border-radius: none;
+    @include corners;
     background-color: $inputBlurColor;
 
     &:focus {
