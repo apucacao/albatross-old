@@ -25,7 +25,7 @@ $linkColor: $red;
 $linkActiveColor: $darkerRed;
 $linkVisitedColor: $darkerRed;
 
-$inputBlurColor: $cream;
+$inputBlurColor: $lightCream;
 $inputFocusColor: white;
 
 $overlayColor: transparentize($cream, 0.25);
@@ -44,10 +44,14 @@ $codeTypeface: $sourcecodePro, monospace;
 
 $smallTypeface: "lucida grande", "lucida sans unicode", "arial", sans-serif;
 
-$codeBackgroundColor: $cream;
+$codeBackgroundColor: transparent;
 
 $borderRadius: 3px;
 
 @mixin corners {
   @include border-radius($borderRadius);
+}
+
+@mixin top-corners {
+  @include border-top-radius($borderRadius);
 }
