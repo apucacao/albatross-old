@@ -10,9 +10,10 @@ $red: hsl(0, 86%, 46%);
 $darkRed: hsl(5, 95%, 41%);
 $darkerRed: darken($darkRed, 5%);
 
+$pageBorderColor: darken($teal, 15%);
+
 $selectionColor: $teal;
 
-// $pageColor: $cream;
 $pageColor: white;
 $markColor: $black;
 $textColor: $black;
