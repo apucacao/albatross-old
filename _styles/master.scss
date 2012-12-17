@@ -242,7 +242,7 @@ footer {
   input {
     font-size: 0.8em;
     display: inline-block;
-    border: none;
+    border: 0;
     @include corners;
     background-color: $inputBlurColor;
 
