@@ -4,7 +4,7 @@
   <% if is_blog_article? %>
     <% prev_article = current_article.previous_article %>
     <% next_article = current_article.next_article %>
-    <% if prev_article %><a rel="next" href="<%= prev_article.url %>">&laquo; previous</a><% end %>
-    <% if next_article %><a rel="prev" href="<%= next_article.url %>">next &raquo;</a><% end %>
+    <% if prev_article %><a rel="next" href="<%= prev_article.url %>">« previous</a><% end %>
+    <% if next_article %><a rel="prev" href="<%= next_article.url %>">next »</a><% end %>
   <% end %>
 </nav>
