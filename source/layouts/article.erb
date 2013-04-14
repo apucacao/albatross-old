@@ -1,0 +1,15 @@
+<% wrap_layout :layout do %>
+  <article role="main">
+    <header>
+      <h1><a href="<%= current_article.url %>"><%= current_article.title %></a></h1>
+      <time><%= current_article.date.strftime('%b %e %Y') %></time>
+      <small class="tags">{
+        <% current_article.tags.each do |tag| %>
+          <%= tag %><% if tag != current_article.tags.last %>, <% end %>
+        <% end %>
+      }</small>
+    </header>
+  </article>
+
+  <%= current_article.body %>
+<% end %>

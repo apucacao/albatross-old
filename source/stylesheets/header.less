@@ -1,6 +1,7 @@
 header[role="banner"] {
   h1 {
     font-size: 3em;
+    padding-top: .333em;
 
     @media (max-width: 599px) {
       font-size: 1.5em;
@@ -14,6 +15,41 @@ header[role="banner"] {
 
     a:hover, a:active {
       color: inherit;
+    }
+  }
+
+  nav {
+    display: none;
+  }
+}
+
+.blog header[role="banner"] {
+  h1 {
+    display: inline-block;
+    margin: 0 0 1em;
+    padding-top: 0;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 1.6;
+  }
+
+  nav {
+    display: inline-block;
+    font-size: .75em;
+
+    &:before {
+      display: inline-block;
+      content: "|";
+      padding: 0 2px
+    }
+
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &:hover, &:active {
+        text-decoration: underline;
+      }
     }
   }
 }

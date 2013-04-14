@@ -3,10 +3,6 @@ title: Module pattern
 tags: javascript, patterns
 ---
 
-How the module pattern works in JavaScript
-
-READMORE
-
 This simple pattern is extremely powerful. You can use it to create entirely independent
 building-blocks for your application, all while minimizing global namespace pollution.
 

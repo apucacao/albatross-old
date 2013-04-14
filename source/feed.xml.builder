@@ -16,7 +16,6 @@ xml.feed "xmlns" => "http://www.w3.org/2005/Atom" do
       xml.published "#{article.date.iso8601}T00:00:00-08:00"
       xml.updated "#{article.date.iso8601}T00:00:00-08:00"
       xml.author { xml.name "Alexis Georges" }
-      xml.summary article.summary, "type" => "html"
       xml.content article.body, "type" => "html"
     end
   end

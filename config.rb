@@ -47,7 +47,10 @@
 #   end
 # end
 
-activate :blog
+activate :blog do |blog|
+  blog.layout = "article"
+end
+
 activate :syntax
 activate :directory_indexes
 

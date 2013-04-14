@@ -3,10 +3,6 @@ title : Headspace
 tags: project, javascript, ruby
 ---
 
-Why we built Headspace, a simple link sharing app, and how
-
-READMORE
-
 Recently, [Mike][mike] and I have been talking about building a little app
 to help us keep track of all the links we share with each other daily.
 

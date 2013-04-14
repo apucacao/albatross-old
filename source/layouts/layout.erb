@@ -14,7 +14,7 @@
     <% end %>
   </head>
 
-  <body class="<%= page_classes %><% if current_page.data.inverted %> inverted<% end %>">
+  <body class="<%= page_classes %><% if current_page.data.inverted %> inverted<% end %><% if is_blog_article? %> blog<% end %>">
     <div class="wrap">
       <%= partial "header" %>
       <%= yield %>

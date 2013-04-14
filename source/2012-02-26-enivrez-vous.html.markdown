@@ -3,10 +3,6 @@ title: Enivrez-vous
 tags: inspiration
 ---
 
-Inspirational poem about living life by Charles Baudelaire
-
-READMORE
-
 ![][photo]
 
 > Il faut être toujours ivre. Tout est là : c’est l’unique question. Pour ne pas sentir l’horrible fardeau du Temps qui brise vos épaules et vous penche vers la terre, il faut vous enivrer sans trêve.
