@@ -1,10 +1,16 @@
 ---
-title: Welcome to Middleman
+title: "Albatross"
 ---
 
-<div class="welcome">
-  <h1>Middleman is Watching</h1>
-  <p class="doc">
-    <%= link_to "Read Online Documentation", "http://middlemanapp.com/" %>
-  </p><!-- .doc -->
-</div><!-- .welcome -->
+<% blog.articles.each do |article| %>
+  <article>
+    <h1>
+      <a href="<%= article.url %>"><%= article.title %></a>
+      <time><%= article.date.strftime('%b %e %Y') %></time>
+    </h1>
+
+    <%= article.summary %>
+
+    <a href="<%= article.url %>">Read more</a></div>
+  </article>
+<% end %>
