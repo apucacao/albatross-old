@@ -63,6 +63,8 @@ set :images_dir, 'images'
 
 Time.zone = "Pacific Time (US & Canada)"
 
+page "/feed.xml", :layout => false
+
 # Build-specific configuration
 configure :build do
   # For example, change the Compass output style for deployment
