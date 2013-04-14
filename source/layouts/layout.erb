@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/feed.xml" rel="alternate" title="Albatross" type="application/atom+xml">
-    <%= stylesheet_link_tag "all" %>
+    <%= stylesheet_link_tag "master" %>
+    <script type="text/javascript" src="//use.typekit.net/fcj0sga.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <% if is_blog_article? %>
       <title><%= current_article.title %> | Albatross</title>
     <% else %>
@@ -12,7 +14,11 @@
     <% end %>
   </head>
 
-  <body class="<%= page_classes %>">
-    <%= yield %>
+  <body class="<%= page_classes %><% if current_page.data.inverted %> inverted<% end %>">
+    <div class="wrap">
+      <%= partial "header" %>
+      <%= yield %>
+      <%= partial "footer" %>
+    </div>
   </body>
 </html>

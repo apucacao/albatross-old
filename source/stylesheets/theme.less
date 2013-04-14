@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+@body-background-color: @white;
+@copy-color: @aubergine;
+@code-background-color: darken(@white, 4%);
+@copy-color-secondary: lighten(@aubergine, 30%);
+@selection-color: darken(@white, 4%);
+@link-color: lighten(@olive, 10%);
+@link-color-active: @link-color;
+@link-color-visited: @link-color;
+
+body {
+  color: @copy-color;
+  background: @body-background-color;
+}
+
+a, a:link {
+  color: @link-color;
+}
+
+a:hover, a:active {
+  color: @link-color-active;
+}
+
+a:visited {
+  color: @link-color-visited;
+}
+
+time {
+  color: @copy-color-secondary;
+}
+
+pre, code {
+  background: @code-background-color;
+}
+
+::selection {
+  background-color: @selection-color;
+}
+
+footer {
+  color: @copy-color-secondary;
+}

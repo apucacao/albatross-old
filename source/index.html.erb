@@ -1,16 +1,13 @@
 ---
 title: "Albatross"
+inverted: true
 ---
 
 <% blog.articles.each do |article| %>
-  <article>
-    <h1>
-      <a href="<%= article.url %>"><%= article.title %></a>
-      <time><%= article.date.strftime('%b %e %Y') %></time>
-    </h1>
-
-    <%= article.summary %>
-
-    <a href="<%= article.url %>">Read more</a></div>
-  </article>
+  <div class="articles">
+    <article>
+      <h1><a href="<%= article.url %>"><%= article.title %></a></h1>
+      <footer><time><%= article.date.strftime('%b %e %Y') %></time></footer>
+    </article>
+  </div>
 <% end %>

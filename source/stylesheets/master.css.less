@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+@import "lib/normalize";
+@import "lib/preboot";
+@import "base";
+@import "mixins";
+@import "syntax";
+@import "theme";
+@import "theme-inverted";
+@import "header";
+@import "footer";
+@import "articles";
+
+body {
+  font-family: @copy-font-family;
+  font-size: 125%;
+  line-height: 1.6;
+  padding: 0.75em 0 0;
+
+  @media (max-width: 599px) {
+    font-size: 112.5%;
+    line-height: 1.44;
+  }
+}
+
+h1, h2, h3 {
+  font-weight: normal;
+
+  @media (max-width: 599px) {
+    font-size: 1em;
+  }
+}
+
+p, ul, blockquote {
+  margin: 1.6em 0;
+}
+
+ul {
+  list-style-position: outside;
+  padding: 0;
+
+  @media (max-width: 599px) {
+    padding: 0 0 0 0.5em;
+  }
+}
+
+a:hover, a:active {
+  text-decoration: none;
+}
+
+blockquote {
+  margin: 0 5%;
+  padding: 0;
+  font-style: italic;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  margin: 0.8em 0;
+}
+
+time {
+  font-family: @small-font-family;
+  font-size: 0.55em;
+  line-height: 1.45;
+}
+
+pre, code {
+  font-family: @code-font-family;
+  font-size: 17px;
+  line-height: 20px;
+}
+
+pre {
+  padding: 0.5em;
+}
+
+::selection {
+  text-shadow: none;
+}
+
+.wrap {
+  .box-sizing(border-box);
+  padding: 0 1em;
+  width: 100%;
+
+  @media (min-width: 600px) {
+    max-width: 40em;
+    padding: 1.6em 1.6em 0;
+  }
+}

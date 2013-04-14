@@ -1,0 +1,25 @@
+article {
+  h1 {
+    font-size: 1em;
+    line-height: 1.6;
+    margin: .25em 0;
+
+    a {
+      display: block;
+    }
+  }
+}
+
+.articles {
+  article {
+    h1, footer {
+      display: inline-block;
+    }
+
+    footer {
+      @media (max-width: 599px) {
+        display: none;
+      }
+    }
+  }
+}
