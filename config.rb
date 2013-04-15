@@ -57,6 +57,7 @@ end
 
 activate :syntax
 activate :directory_indexes
+activate :minify_html
 
 set :markdown_engine, :redcarpet
 

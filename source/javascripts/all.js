@@ -1,1 +1,6 @@
-//= require_tree .
+//= require "lib/jquery"
+//= require "lib/jquery.fitvids"
+
+$(function() {
+  $('article').fitVids();
+});
