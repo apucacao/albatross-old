@@ -2,10 +2,10 @@
 # the following line to use "https"
 source 'http://rubygems.org'
 
-gem "middleman", "~>3.0.13"
+gem "rb-fsevent", "~> 0.9"
+gem "middleman", :git => "git://github.com/middleman/middleman.git"
 gem "middleman-blog"
 gem "middleman-syntax"
-gem "middleman-minify-html"
 gem "nokogiri"
 gem "builder"
 gem "therubyracer"
