@@ -9,7 +9,30 @@
         <% end %>
       }</small>
     </header>
+
+    <div class="content">
+      <% (video_type, video_id) = detect_video %>
+
+      <% if is_video? %>
+        <% if video_type == 'vimeo' %>
+          <iframe
+            width="640"
+            height="360"
+            frameborder="0"
+            src="http://player.vimeo.com/video/<%= video_id %>?title=0&portrait=0"></iframe>
+        <% elsif video_type == 'youtube' %>
+          <iframe
+            class="youtube-player"
+            type="text/html"
+            width="640"
+            height="385"
+            frameborder="0"
+            src="http://www.youtube.com/embed/<%= video_id %>?showinfo=0"></iframe>
+        <% end %>
+      <% end %>
+
+      <%= current_article.body %>
+    </div>
   </article>
 
-  <%= current_article.body %>
 <% end %>

@@ -1,3 +1,5 @@
+require 'lib/video_detection'
+
 ###
 # Compass
 ###
@@ -46,6 +48,8 @@
 #     "Helping"
 #   end
 # end
+
+helpers VideoDetection
 
 activate :blog do |blog|
   blog.layout = "article"
