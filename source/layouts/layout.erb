@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/feed.xml" rel="alternate" title="Albatross" type="application/atom+xml">
     <%= stylesheet_link_tag "master" %>
-    <%= javascript_include_tag "all" %>
     <script type="text/javascript" src="//use.typekit.net/fcj0sga.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     <% if is_blog_article? %>
@@ -15,11 +14,12 @@
     <% end %>
   </head>
 
-  <body class="<%= page_classes %><% if current_page.data.inverted %> inverted<% end %><% if is_blog_article? %> blog<% end %>">
+  <body class="<%= page_classes %>">
     <div class="wrap">
       <%= partial "header" %>
       <%= yield %>
       <%= partial "footer" %>
     </div>
+    <%= javascript_include_tag "all" %>
   </body>
 </html>
