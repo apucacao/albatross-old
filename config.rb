@@ -58,6 +58,12 @@ end
 activate :syntax
 activate :directory_indexes
 
+activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.remote = "hosting"
+  deploy.branch = "master"
+end
+
 set :markdown_engine, :redcarpet
 
 set :markdown, :fenced_code_blocks => true, :autolink => true, :smartypants => true
