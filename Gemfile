@@ -3,7 +3,8 @@
 source 'http://rubygems.org'
 
 gem "rb-fsevent", "~> 0.9"
-gem "middleman", :git => "git://github.com/middleman/middleman.git"
+gem "middleman"
+# gem "middleman", :git => "git://github.com/middleman/middleman.git"
 gem "middleman-blog"
 gem "middleman-syntax"
 gem "middleman-deploy"
