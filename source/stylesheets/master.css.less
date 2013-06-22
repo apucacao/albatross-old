@@ -4,6 +4,19 @@
 @import "lib/preboot";
 @import "syntax";
 
+@font-size: 125%;
+@line-height: 1.5;
+
+@copy-color: #1b2230;
+@link-color: #4e6875;
+@accent-color: #F38A24;
+// @accent-color: #A0C4D2;
+// @accent-color: #D3B529;
+@soft: #b2d3e5;
+
+@sans-serif: "Vollkorn", sans-serif;
+@monospace: "inconsolata-1","inconsolata-2";
+
 *, *:before, *:after {
   .box-sizing(border-box);
 }
@@ -16,4 +29,110 @@
 
 .wrap:after {
   .clearfix;
+}
+
+body {
+  font-size: @font-size;
+  font-family: @sans-serif;
+  line-height: @line-height;
+  color: @copy-color;
+}
+
+h1, h2, h3 {
+  font-size: 1em;
+  font-weight: normal;
+  margin: 0;
+}
+
+a, a:link {
+  color: @link-color;
+  text-decoration: none;
+}
+
+a:visited {
+  color: darken(@link-color, 7%);
+}
+
+a:hover, a:active {
+  text-decoration: underline;
+}
+
+p, ul, blockquote {
+  margin: 1.5em 0;
+}
+
+pre, code {
+  font-family: @monospace;
+}
+
+pre {
+  margin: 1.7647em 0;
+  padding: 1em;
+  background: white;
+  border: 1px solid #e7e7e7;
+  border-bottom: 1px solid #ddd;
+  -webkit-box-shadow: 0 1px 3px 0 #eee;
+  -webkit-border-radius: 3px;
+  font-size: .85em;
+  line-height: 1.4;
+}
+
+blockquote {
+  font-style: italic;
+
+  cite {
+    font-size: .7em;
+    font-style: normal;
+    line-height: 2.142857;
+    letter-spacing: 1px;
+    text-indent: -14px;
+    text-transform: uppercase;
+    display: block;
+  }
+}
+
+.wrap {
+  width: 900px;
+  margin: 0 auto;
+  padding: 3em 0;
+}
+
+header[role="banner"] {
+  padding: 0 0 1.25em;
+  margin: 0 0 unit(@line-height * 2, em);
+  border-bottom: .25em solid @accent-color;
+
+  h1 {
+    font-size: 1.4em;
+    line-height: 1.0714;
+
+    a {
+      color: @copy-color;
+    }
+  }
+}
+
+time {
+  font-size: 17px;
+}
+
+footer[role="contentinfo"] {
+  padding: unit(@line-height, em) 0 0;
+}
+
+.content img {
+  max-width: 100%;
+  border: 1px solid #e7e7e7;
+  border-bottom: 1px solid #ddd;
+  -webkit-box-shadow: 0 1px 3px 0 #eee;
+  -webkit-border-radius: 3px;
+}
+
+article header {
+  margin: 0 0 1.5em;
+
+  h1 {
+    font-size: 1.2em;
+    line-height: 1.25;
+  }
 }
