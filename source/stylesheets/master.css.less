@@ -5,13 +5,12 @@
 @import "syntax";
 
 @font-size: 125%;
+@small-font-size: 100%;
 @line-height: 1.5;
 
 @copy-color: #1b2230;
 @link-color: #4e6875;
-@accent-color: #F38A24;
-// @accent-color: #A0C4D2;
-// @accent-color: #D3B529;
+@accent-color: #f38a24;
 @soft: #b2d3e5;
 
 @sans-serif: "Vollkorn", sans-serif;
@@ -32,9 +31,13 @@
 }
 
 body {
-  font-size: @font-size;
-  font-family: @sans-serif;
+  @media (min-width: 600px) {
+    font-size: @font-size;
+  }
+
+  font-size: @small-font-size;
   line-height: @line-height;
+  font-family: @sans-serif;
   color: @copy-color;
 }
 
@@ -92,9 +95,13 @@ blockquote {
 }
 
 .wrap {
-  width: 900px;
-  margin: 0 auto;
-  padding: 3em 0;
+  padding: 1em;
+
+  @media (min-width: 600px) {
+    width: 900px;
+    margin: 0 auto;
+    padding: 3em 0;
+  }
 }
 
 header[role="banner"] {
