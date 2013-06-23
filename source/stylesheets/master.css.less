@@ -1,8 +1,7 @@
 @charset "utf-8";
 
 @import "lib/normalize";
-@import "lib/preboot";
-@import "syntax";
+@import "syntax.css";
 
 @font-size: 125%;
 @small-font-size: 100%;
@@ -15,6 +14,12 @@
 
 @sans-serif: "Vollkorn", sans-serif;
 @monospace: "Inconsolata", monospace;
+
+.box-sizing(@box-model) {
+  -webkit-box-sizing: @box-model; // Safari <= 5
+     -moz-box-sizing: @box-model; // Firefox <= 19
+          box-sizing: @box-model;
+}
 
 *, *:before, *:after {
   .box-sizing(border-box);

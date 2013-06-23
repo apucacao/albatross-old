@@ -55,7 +55,11 @@ activate :blog do |blog|
   blog.layout = "article"
 end
 
-activate :syntax
+activate :syntax,
+         :linenos => 'inline',
+         :anchorlinenos => true,
+         :linenostart => 2
+         
 activate :directory_indexes
 
 activate :deploy do |deploy|
