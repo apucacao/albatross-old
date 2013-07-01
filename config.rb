@@ -51,6 +51,8 @@ require 'lib/video_detection'
 
 helpers VideoDetection
 
+activate :livereload
+
 activate :blog do |blog|
   blog.layout = "article"
 end
