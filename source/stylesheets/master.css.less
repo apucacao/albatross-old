@@ -54,7 +54,6 @@ h1, h2, h3 {
 
 a, a:link {
   color: @link-color;
-  text-decoration: none;
 }
 
 a:visited {
@@ -62,7 +61,8 @@ a:visited {
 }
 
 a:hover, a:active {
-  text-decoration: underline;
+  color: lighten(@link-color, 20%);
+//  text-decoration: underline;
 }
 
 p, ul, blockquote {
@@ -120,6 +120,7 @@ header[role="banner"] {
 
     a {
       color: @copy-color;
+      text-decoration: none;
     }
   }
 }
