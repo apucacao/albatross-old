@@ -29,8 +29,10 @@
       <%= current_article.body %>
     </div>
     
-    <aside>
-      <%= partial "disqus" %>
-    </aside>
+    <% if !development? %>
+      <aside>
+        <%= partial "disqus" %>
+      </aside>
+    <% end %>
   </article>
 <% end %>
