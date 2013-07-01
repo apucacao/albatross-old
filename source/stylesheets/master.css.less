@@ -120,6 +120,10 @@ header[role="banner"] {
       color: @copy-color;
       text-decoration: none;
     }
+
+    a:hover, a:active {
+      text-decoration: underline;
+    }
   }
 }
 
@@ -156,11 +160,15 @@ article header {
 
   h1 {
     font-size: 1.4em;
-    // line-height: 1.0714;
     line-height: 1.7143;
 
-    a {
+    a, a:visited {
+      color: @copy-color;
       text-decoration: none;
+    }
+
+    a:hover, a:active {
+      text-decoration: underline;
     }
   }
 
