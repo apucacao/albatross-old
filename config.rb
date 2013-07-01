@@ -70,6 +70,8 @@ activate :deploy do |deploy|
   deploy.branch = "master"
 end
 
+set :disqus, 'albatross'
+
 set :markdown_engine, :redcarpet
 
 set :markdown, :fenced_code_blocks => true, :autolink => true, :smartypants => true
