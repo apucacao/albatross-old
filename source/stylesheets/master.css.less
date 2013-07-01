@@ -62,7 +62,6 @@ a:visited {
 
 a:hover, a:active {
   color: lighten(@link-color, 20%);
-//  text-decoration: underline;
 }
 
 p, ul, blockquote {
@@ -126,7 +125,7 @@ header[role="banner"] {
 }
 
 time {
-  font-size: 17px;
+  font-size: @small-font-size;
 }
 
 footer[role="contentinfo"] {
@@ -139,6 +138,20 @@ footer[role="contentinfo"] {
   border-bottom: 1px solid #ddd;
   -webkit-box-shadow: 0 1px 3px 0 #eee;
   -webkit-border-radius: 3px;
+}
+
+.articles {
+  article {
+    h1 {
+      display: inline-block;
+      // background: red;
+    }
+
+    time {
+      display: inline-block;
+      // background: black;
+    }
+  }
 }
 
 article header {
